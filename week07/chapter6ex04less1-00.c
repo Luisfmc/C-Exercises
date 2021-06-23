@@ -1,14 +1,11 @@
 #include <stdio.h>
 
-char line[25];
 float money;
 int quarters, dimes, nickels, pennies;
 int main()
 {
 	printf("Amount less 1.00\n");
-
-	fgets(line, sizeof(line), stdin);
-	sscanf(line, "%f", &money);
+	scanf("%f", &money);
 
 	while (money > 0.00 && money <= 1.00) {
 		
