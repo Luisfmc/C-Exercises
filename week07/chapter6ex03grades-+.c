@@ -1,15 +1,17 @@
 #include <stdio.h>
 
+char line[50];
+int num;
+
 int main(){
-	int num;
-    printf("Enter the Number: ");
-    scanf("%d", &num);
-    
+	
+	printf("Enter the score: ");
+    fgets(line, sizeof(line), stdin);
+    sscanf(line, "%d", &num);
 	
 	if (num >= 0 && num <= 60){
 	printf("F grade");	
 	}
-	
 	else if (num >= 64 && num <=67){
 	printf("D grade");
 }
@@ -31,7 +33,6 @@ int main(){
 		else if(num >= 78 && num <= 80){
 			printf("C+ grade");
 		}
-		
 	}
 	
 	if (num >=81 && num <= 90){
@@ -44,10 +45,8 @@ int main(){
 		
 		else if(num >= 88 && num <= 90){
 			printf("B+ grade");
-		}
-		
+		}	
 	}
-	
 	if (num >=91 && num <= 100){
 		if(num >= 94 && num <= 97){
 			printf("A| grade");
@@ -58,9 +57,7 @@ int main(){
 		
 		else if(num >= 98 && num <= 100){
 			printf("A+ grade");
-		}
-		
+		}	
 	}
-	
 }
 	

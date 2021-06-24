@@ -1,11 +1,12 @@
 #include <stdio.h>
 
+char line[50];
 int year;
 int main()
 {
 	printf("Enter year number: ");
-	scanf("%d", &year);
-{
+	fgets(line, sizeof(line), stdin);
+	sscanf(line, "%d", &year);
 
 	if((year % 4) == 0){
 		printf("Leap");	
@@ -18,5 +19,5 @@ int main()
 		printf("No leap");
 	}
 
-}
+
 }

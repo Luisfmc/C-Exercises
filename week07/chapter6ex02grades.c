@@ -1,11 +1,17 @@
 #include <stdio.h>
 
+char line [50];
+int num;
+
+
+
 int main(){
-	    int num;
-    printf("Enter the Number: ");
-    scanf("%d", &num);
-    
 	
+    printf("Enter the score: ");
+    fgets(line, sizeof(line), stdin);
+    sscanf(line, "%d", &num);
+    
+    
 	if(num <= 100 && num > 90){
 		printf("A grade");
 	}

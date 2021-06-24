@@ -1,14 +1,16 @@
 #include <stdio.h>
-
+char line[50];
 float pay, dllrs, hours;
 int overtime;
 
 int main(){
 	
 	printf ("Enter number of hours: \n");
-	scanf ("%f", &hours);
+	fgets (line, sizeof(line), stdin);
+	sscanf (line, "%f", &hours);
 	printf ("Enter weekly pay: \n");
-	scanf ("%f", &dllrs);
+	fgets (line, sizeof(line), stdin);
+	sscanf (line, "%f", &dllrs);
 	
 	if (hours <= 40){
 		pay = hours * dllrs;

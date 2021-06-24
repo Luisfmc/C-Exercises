@@ -1,42 +1,48 @@
 #include <stdio.h>
 
+char line [50];
 float money;
-int quarters, dimes, nickels, pennies;
+int q, d, n, p;
 int main()
+/* 
+q=quarters
+d = dimes
+n = nickels
+p=pennies
+*/
 {
 	printf("Amount less 1.00\n");
-	scanf("%f", &money);
+	fgets(line, sizeof(line), stdin);
+	sscanf(line, "%f", &money);
 
 	while (money > 0.00 && money <= 1.00) {
 		
 		if (money >= 0.25) {
-			++quarters;
+			++q;
 			money -= 0.25;
 		}
 		else if (money >= 0.10) {
-			++dimes;
+			++d;
 			money -= 0.10;
 		}
 		else if (money >= 0.05) {
-			++nickels;
+			++n;
 			money -= 0.05;
 		}
 		else {
-			++pennies;
+			++p;
 			money -= 0.01;
 		}
+		
 	}
-	
-	
-	printf("%d quarters\n", quarters);
-	printf("%d dimes\n", dimes);
-	printf("%d nickels\n", nickels);
-	printf("%d pennies\n", pennies);	
+	printf("%d quarters\n", q);
+	printf("%d dimes\n", d);
+	printf("%d nickels\n", n);
+	printf("%d pennies\n", p);
 
 	
 	if(money > 1.00){
 			printf("The value is not correct\n");
-
 		}
 	
 }
