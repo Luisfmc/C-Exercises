@@ -1,3 +1,5 @@
+/*By Luis Mendez 
+UPY Robotics 2C*/
 #include<stdio.h>
 #include<math.h>
 

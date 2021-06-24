@@ -1,3 +1,5 @@
+/*By Luis Mendez 
+UPY Robotics 2C*/
 #include <stdio.h>
 
 char line[50];
