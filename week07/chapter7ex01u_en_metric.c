@@ -1,7 +1,9 @@
+/*By Luis Mendez 
+UPY Robotics 2C*/
 #include <stdio.h> 
 #include <string.h> 
 
-char line[100];
+char line[50];
 float u_en, u_c;
 int c;
 int main (){
