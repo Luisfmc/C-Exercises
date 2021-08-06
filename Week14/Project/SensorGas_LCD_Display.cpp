@@ -20,7 +20,7 @@ void setup() {
 
 void loop() {
   
-  int gas_lvl; //Entero
+  int gas_lvl; // Integer
   gas_lvl = analogRead(A0); // Read value from Analog pin (A0)
   lcd.setCursor(00,00); // LCD parameters
   lcd.print("Gas Level:"); // Print txt
